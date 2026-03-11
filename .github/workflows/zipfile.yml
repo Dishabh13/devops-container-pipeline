@@ -1,0 +1,9 @@
+me: Create Zip Package
+          run: zip -r build-package.zip . -x "*.git*"
+
+                  - name: Upload Build Artifact
+                            uses: actions/upload-artifact@v4
+                                      with:
+                                                  name: build-package-artifact
+                                                              path: build-package.zip
+
